@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+			VStack {
+				TopBarView()
+				Spacer()
+			}
+			.padding(.horizontal, 18)
+			.padding(.top, 12)
     }
 }
 
