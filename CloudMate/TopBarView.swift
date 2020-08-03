@@ -9,23 +9,23 @@ import SwiftUI
 
 struct TopBarView: View {
     var body: some View {
-			HStack {
-				Button(action: {
-					print("pressed list")
-				}) {
-					Image(systemName: "list.bullet")
-						.font(.system(size: 22, weight: .bold))
-						.foregroundColor(Color.gray)
-				}
-				Spacer()
-				Button(action: {
-					print("pressed add")
-				}) {
-					Image(systemName: "plus")
-						.font(.system(size: 26, weight: .regular))
-						.foregroundColor(Color.gray)
-				}
+		HStack {
+			Button(action: {
+				print("pressed list")
+			}) {
+				Image(systemName: "list.bullet")
+					.font(.system(size: 22, weight: .bold))
+					.foregroundColor(Color.gray)
 			}
+			Spacer()
+			Button(action: {
+				print("pressed add")
+			}) {
+				Image(systemName: "plus")
+					.font(.system(size: 26, weight: .regular))
+					.foregroundColor(Color.gray)
+			}
+		}
     }
 }
 
