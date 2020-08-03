@@ -11,6 +11,8 @@ struct ContentView: View {
     var body: some View {
 			VStack {
 				TopBarView()
+				WeatherView()
+					.padding(.top, 80)
 				Spacer()
 			}
 			.padding(.horizontal, 18)

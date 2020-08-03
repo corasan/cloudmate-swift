@@ -14,7 +14,7 @@ struct TopBarView: View {
 					print("pressed list")
 				}) {
 					Image(systemName: "list.bullet")
-						.font(.system(.title))
+						.font(.system(size: 22, weight: .bold))
 						.foregroundColor(Color.gray)
 				}
 				Spacer()
@@ -22,7 +22,7 @@ struct TopBarView: View {
 					print("pressed add")
 				}) {
 					Image(systemName: "plus")
-						.font(.system(.title))
+						.font(.system(size: 26, weight: .regular))
 						.foregroundColor(Color.gray)
 				}
 			}

@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA5503AE24D8C85100D96FE2 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BA5503AD24D8C85100D96FE2 /* SwiftUICharts */; };
+		BA5503B124D8C88300D96FE2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5503B024D8C88300D96FE2 /* StoreKit.framework */; };
 		BA867BD824D68D6200AC0478 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA867BD724D68D6200AC0478 /* TopBarView.swift */; };
+		BA867BDA24D7110500AC0478 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA867BD924D7110500AC0478 /* WeatherView.swift */; };
 		BACBF4A124D637F600E18A82 /* CloudMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF4A024D637F600E18A82 /* CloudMateApp.swift */; };
 		BACBF4A324D637F600E18A82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF4A224D637F600E18A82 /* ContentView.swift */; };
 		BACBF4A524D637F700E18A82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACBF4A424D637F700E18A82 /* Assets.xcassets */; };
@@ -15,7 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA5503B024D8C88300D96FE2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BA5503B224D8C91200D96FE2 /* CloudMateStoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = CloudMateStoreConfig.storekit; sourceTree = "<group>"; };
 		BA867BD724D68D6200AC0478 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		BA867BD924D7110500AC0478 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		BACBF49D24D637F600E18A82 /* CloudMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBF4A024D637F600E18A82 /* CloudMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMateApp.swift; sourceTree = "<group>"; };
 		BACBF4A224D637F600E18A82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5503AE24D8C85100D96FE2 /* SwiftUICharts in Frameworks */,
+				BA5503B124D8C88300D96FE2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA5503AF24D8C88300D96FE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA5503B024D8C88300D96FE2 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BACBF49424D637F600E18A82 = {
 			isa = PBXGroup;
 			children = (
 				BACBF49F24D637F600E18A82 /* CloudMate */,
 				BACBF49E24D637F600E18A82 /* Products */,
+				BA5503AF24D8C88300D96FE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +74,10 @@
 				BACBF4A024D637F600E18A82 /* CloudMateApp.swift */,
 				BACBF4A224D637F600E18A82 /* ContentView.swift */,
 				BA867BD724D68D6200AC0478 /* TopBarView.swift */,
+				BA867BD924D7110500AC0478 /* WeatherView.swift */,
 				BACBF4A424D637F700E18A82 /* Assets.xcassets */,
 				BACBF4A924D637F700E18A82 /* Info.plist */,
+				BA5503B224D8C91200D96FE2 /* CloudMateStoreConfig.storekit */,
 				BACBF4A624D637F700E18A82 /* Preview Content */,
 			);
 			path = CloudMate;
@@ -88,6 +107,9 @@
 			dependencies = (
 			);
 			name = CloudMate;
+			packageProductDependencies = (
+				BA5503AD24D8C85100D96FE2 /* SwiftUICharts */,
+			);
 			productName = CloudMate;
 			productReference = BACBF49D24D637F600E18A82 /* CloudMate.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +137,9 @@
 				Base,
 			);
 			mainGroup = BACBF49424D637F600E18A82;
+			packageReferences = (
+				BA5503AC24D8C85100D96FE2 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = BACBF49E24D637F600E18A82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +169,7 @@
 				BACBF4A324D637F600E18A82 /* ContentView.swift in Sources */,
 				BA867BD824D68D6200AC0478 /* TopBarView.swift in Sources */,
 				BACBF4A124D637F600E18A82 /* CloudMateApp.swift in Sources */,
+				BA867BDA24D7110500AC0478 /* WeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA5503AC24D8C85100D96FE2 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA5503AD24D8C85100D96FE2 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA5503AC24D8C85100D96FE2 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BACBF49524D637F600E18A82 /* Project object */;
 }
